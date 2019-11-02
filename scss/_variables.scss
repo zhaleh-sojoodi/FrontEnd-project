@@ -1,0 +1,43 @@
+$white: #ffffff;
+$lightgrey: #f4f4f4;
+$grey: #dbdbdb;
+$blue: #002d55;
+$brightblue: #296cf6;
+$darkblue: #001D36;
+$yellow: #fff200;
+
+$body-text-color: $blue;
+$dark-text-color: $darkblue;
+$light-text-color: $white;
+$link-hover-color: $brightblue;
+
+$main-accent-color: $brightblue;
+$secondary-accent-color: $yellow;
+
+$light-bg-color: $lightgrey;
+$dark-bg-color: $darkblue;
+
+$light-border: 1px solid rgba(255, 255, 255, 0.5);
+$highlight-color: #e9e9e9;
+
+$body-font: 'Metropolis Regular';
+$heading-font: 'Metropolis SemiBold';
+$subheading-font: 'Metropolis Medium';
+
+$sm-padding-x: 1rem;
+$sm-padding-y: 0.75rem;
+
+$md-padding-x: 1.75rem;
+$md-padding-y: 1rem;
+
+$lg-padding-section-x: 15vw;
+$lg-padding-x: 3rem;
+$lg-padding-y: 1.5rem;
+
+$xl-padding-section-x: 20vw;
+$xl-padding-x: 4rem;
+$xl-padding-y: 1.75rem;
+
+$xxl-padding-section-x: 25vw;
+$xxl-padding-x: 5rem;
+$xxl-padding-y: 1.75rem;

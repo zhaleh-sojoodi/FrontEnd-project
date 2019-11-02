@@ -1,0 +1,155 @@
+.hero {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 $sm-padding-x;
+
+    @include md {
+        padding: 0 $md-padding-x;
+        height: 50vh;
+    }
+
+    @include lg {
+        padding: 0 $lg-padding-x;
+    }
+
+    @include xl {
+        height: 80vh;
+        padding: 0 $xl-padding-x;
+    }
+
+    @include xxl {
+        padding: 0 $xxl-padding-x;
+    }
+
+    &.hero-home {
+        background: url("../images/code-medium.jpg");
+        background-size: cover;
+        background-position: bottom 75% right 80%;
+
+        @include lg {
+            background: url("../images/code-large.jpg");
+            background-position: bottom 75% right 25%;
+        }
+    }
+
+    &.hero-students {
+        background: url("../images/workspace-medium.jpg");
+        background-size: cover;
+        background-position: bottom 25% right 40%;
+
+        @include lg {
+            background: url("../images/workspace-large.jpg");
+            background-position: bottom 25% right 25%;
+        }
+    }
+
+    &.hero-schedule {
+        background: url("../images/crowd-medium.jpg");
+        background-size: cover;
+        background-position: bottom 75% right 70%;
+
+        @include lg {
+            background: url("../images/crowd-large.jpg");
+            background-position: bottom 50% right 25%;
+        }
+    }
+
+    &.hero-staff {
+        background: url("../images/building-medium.jpg");
+        background-size: cover;
+        background-position: bottom 75% right 80%;
+
+        @include lg {
+            background: url("../images/building-large.jpg");
+            background-position: bottom 75% right 25%;
+        }
+    }
+
+    &.hero-courses {
+        background: url("../images/courses-small.jpg");
+        background-size: cover;
+        background-position: bottom 75% right 100%;
+
+        @include md {
+            background: url("../images/courses-medium.jpg");
+            background-position: bottom 75% right 25%;
+        }
+
+        @include lg {
+            background: url("../images/courses-large.jpg");
+            background-position: bottom 75% right 25%;
+        }
+    }
+
+    &.hero-resources {
+        background: url("../images/laptop-medium.jpg");
+        background-size: cover;
+        background-position: bottom 40% right 70%;
+
+        @include lg {
+            background: url("../images/laptop-large.jpg");
+            background-position: bottom 40% right 25%;
+        }
+    }
+
+    &.hero-contact {
+        background: url("../images/street-medium.jpg");
+        background-size: cover;
+        background-position: bottom 50% right 100%;
+
+        @include lg {
+            background: url("../images/street-large.jpg");
+            background-position: bottom 40% right 25%;
+        }
+    }
+
+    h1 {
+        font-family: 'Metropolis Medium';
+        color: $light-text-color;
+        font-size: 2.25rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+
+        @include lg {
+            font-size: 2.5rem;
+        }
+
+        @include xl {
+            font-size: 3rem;
+        }
+
+        @include xxl {
+            font-size: 3.5rem;
+        }
+    }
+
+    .heading-line-break {
+        @include md {
+            display: none;
+        }
+    }
+
+    p {
+        color: $light-text-color;
+        font-size: 1rem;
+        line-height: 1.25rem;
+
+        @include md {
+            font-size: 1.25rem;
+        }
+
+        @include lg {
+            font-size: 1.5rem;
+        }
+
+        @include xl {
+            font-size: 1.75rem;
+        }
+
+        @include xxl {
+            font-size: 1.85rem;
+        }
+    }
+}

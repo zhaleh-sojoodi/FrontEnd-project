@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+    font-family: $body-font;
+    color: $body-text-color;
+    font-size: 1rem;
+
+    ::selection {
+        background-color: $highlight-color;
+    }
+
+    @include md {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}

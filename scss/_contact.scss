@@ -1,0 +1,85 @@
+.contact-form {
+    margin: 1rem 0;
+
+    // Change input placeholder text color
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:    $body-text-color;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    $body-text-color;
+       opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    $body-text-color;
+       opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color:    $body-text-color;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color:    $body-text-color;
+    }
+    
+    ::placeholder { /* Most modern browsers support this now. */
+        color:    $body-text-color;
+    }
+
+    input[type=text], input[type=submit], textarea {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 0.75rem;
+        resize: vertical;
+        font-family: 'Metropolis Regular', sans-serif;
+        font-weight: 600;
+    }
+
+    input[type=text], textarea {
+        outline: none;
+        border: none;
+        background: $light-bg-color;
+        color: $body-text-color;
+        transition: all 0.3s ease-in-out;
+        border-bottom: 4px solid transparent;
+
+        &:focus {
+            border-bottom: 4px solid $grey;
+        }
+    }
+
+    input[type=text]{
+        @include md {
+            &:first-child {
+                margin-right: 1rem;
+            }
+            width: 50%;
+        }
+    }
+
+    textarea {
+        min-height: 175px;
+    }
+
+    input[type=radio] {
+        margin: 0.5rem 0;
+        @include lg {
+            margin: 0.75rem 0;
+        }
+    }
+
+    label {
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    input[type=submit] {
+        @extend .btn-blue;
+        background: transparent;
+    }
+
+    .contact-row {
+        @include md {
+            width: 100%;
+            display: flex;
+        }
+    }
+}

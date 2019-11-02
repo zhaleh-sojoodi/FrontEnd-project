@@ -1,0 +1,80 @@
+footer {
+    border-top: 1px solid $grey;
+    padding: 1rem $sm-padding-x;
+    color: $dark-text-color;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include md {
+        padding: 1.5rem $md-padding-x;
+    }
+
+    @include lg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.75rem 3.5rem;
+    }
+
+    @include xl {
+        padding: 2rem 4.5rem;
+    }
+
+    @include xxl {
+        padding: 2.25rem 5.5rem;
+    }
+
+    .footer-logo {
+        width: 25%;
+        margin: 1rem 0;
+        
+        g rect {
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            g rect {
+                transition: all 0.3s ease-in-out;
+                fill: $main-accent-color;
+            }
+        }
+
+        @include md {
+            width: 10%;
+        }
+
+        @include lg {
+            width: 8%;
+            height: 100%;
+        }
+
+        @include xl {
+            width: 7%;
+        }
+
+        @include xxl {
+            width: 5%;
+        }
+    
+    }
+
+    .footer-link {
+        transition: all 0.3s ease-in-out;
+        margin: 1rem 0;
+        font-weight: 600;
+
+        &:hover {
+            color: $main-accent-color;
+        }
+    }
+
+    .footer-nav {
+        padding-inline-start: 0;
+        li {
+            margin: 0.5rem 0;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+    }
+}

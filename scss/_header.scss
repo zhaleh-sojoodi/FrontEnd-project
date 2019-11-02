@@ -1,0 +1,253 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: $light-border;
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+
+    @include md {
+        height: 8vh;
+    }
+
+    @include lg {
+        height: 12vh;
+    }
+
+    &.site-header-scroll {
+        background-color: $white;
+        -webkit-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.2);
+        box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.2);
+    }
+}
+
+.site-logo-container {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    padding: $sm-padding-y $sm-padding-x;
+
+    @include md {
+        width: 90%;
+        padding: $md-padding-y $md-padding-x;
+    }
+
+    @include lg {
+        width: 40%;
+        padding: $lg-padding-y $lg-padding-x;
+    }
+
+    @include xl {
+        padding: $xl-padding-y $xl-padding-x;
+    }
+
+    @include xxl {
+        padding: $xxl-padding-y $xxl-padding-x;
+    }
+
+    svg {
+        height: 100%;
+
+        g {
+            rect {
+                transition: all 0.3s ease-in-out;
+            }
+
+            path {
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        &.site-header-scroll {
+            g {
+                rect {
+                    fill: $blue;
+                }
+
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    .site-title {
+        font-weight: 600;
+        font-size: 0.75rem;
+        padding-left: 0.5rem;
+        color: $light-text-color;
+        transition: all 0.3s ease-in-out;
+
+        @include md {
+            font-size: 0.95rem;
+        }
+
+        @include xl {
+            font-size: 0.95rem;
+        }
+
+        @include xxl {
+            font-size: 1.25rem;
+        }
+
+        &.site-header-scroll {
+            color: $body-text-color;
+        }
+
+        &:hover {
+            color: $main-accent-color;
+        }
+    }
+}
+
+.menu-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    border-left: $light-border;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    @include md {
+        width: 10%;
+    }
+
+    @include lg {
+        display: none;
+    }
+
+    &.site-header-scroll {
+        border-left: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        padding: $sm-padding-y $sm-padding-x;
+
+        @include md {
+            padding: $md-padding-y $md-padding-x;
+        }
+
+        &.site-header-scroll {
+            .bar {
+                background-color: $body-text-color;
+            }
+        }
+
+        .bar {
+            background-color: $white;
+            margin: 4px 0px;
+            width: 27px;
+            height: 2px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.open-nav {
+            .bar:nth-child(1) {
+                transform: translate(0, 10px) rotate(45deg);
+            }
+        
+            .bar:nth-child(2) {
+                opacity: 0;
+            }
+        
+            .bar:nth-child(3) {
+                transform: translate(0, -10px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.site-nav {
+    display: none;
+
+    @include lg {
+        display: block;
+        width: 60%;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            padding-right: $lg-padding-x;
+            
+            li {
+                font-family: 'Metropolis Medium', sans-serif;
+                font-size: 0.95rem;
+                font-weight: 500;
+                color: $white;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: $main-accent-color;
+                }
+            }
+        }
+
+        &.site-header-scroll {
+            li {
+                color: $body-text-color;
+            }
+        }
+    }
+
+    @include xl {
+        ul li {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    @include xxl {
+        ul li {
+            font-size: 1.25rem;
+        }
+    }
+
+    // Mobile
+    &.open-nav {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 88vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        animation: fadeMenu 0.3s;
+
+        @include md {
+            height: 92vh;
+        }
+
+        ul {
+            padding-inline-start: 0;
+
+            li {
+                font-family: 'Metropolis Medium', sans-serif;
+                text-align: center;
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
+        }
+    }
+}
+
+@keyframes fadeMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,206 @@
+main {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+}
+
+section {
+    padding: 3rem $sm-padding-x;
+
+    &.section-reduced-padding {
+        padding-top: 0.75rem;
+    }
+
+    @include md {
+        padding: 3.5rem $md-padding-x;
+    }
+
+    @include lg {
+        padding: 4rem $lg-padding-section-x;
+    }
+
+    @include xl {
+        padding: 4.5rem $xl-padding-section-x;
+    }
+
+    @include xxl {
+        padding: 5rem $xxl-padding-section-x;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+
+        @include md {
+            font-size: 1.7rem;
+        }
+
+        @include lg {
+            font-size: 1.9rem;
+        }
+
+        @include xl {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 1.75rem;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .paragraph-link {
+        font-weight: 600;
+        color: $main-accent-color;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $body-text-color;
+        }
+    }
+
+    &.section-light {
+        background-color: $light-bg-color;
+    }
+
+    &.section-dark {
+        background-color: $dark-bg-color;
+        color: $light-text-color;
+
+        h1 {
+            color: $secondary-accent-color;
+        }
+    }
+
+    &.section-centered {
+        text-align: center;
+    }
+
+    &.section-home-parallax {
+        @extend .section-dark;
+        background: url(../../images/office-medium.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include lg {
+            background: url(../../images/office-large.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .bolded-text {
+        font-weight: 700;
+    }
+
+    .learn-list {
+        list-style-image: url('../../svg/white-check.svg');
+        padding-left: $sm-padding-x + 0.5rem;
+
+        li {
+            margin: 0.75rem 0;
+            text-align: left;
+        }
+
+        @include md {
+            display: flex;
+
+            div {
+                margin: 0 auto;
+            }
+        }
+
+        @include lg {
+            justify-content: space-around;
+
+            div {
+                margin: 0;
+            }
+        }
+
+        @include lg {
+            justify-content: space-evenly;
+        }
+    }
+
+    .requirements-desc {
+        margin-bottom: 1rem;
+    }
+
+    .requirements-list {
+        list-style-type: circle;
+        padding-left: $sm-padding-x + 0.5rem;
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .btn-blue {
+        display: inline-block;
+        border: 2px solid $blue;
+        margin-top: 1rem;
+        padding: 1rem;
+        width: 100%;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: $body-text-color;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $main-accent-color;
+            border: 2px solid $main-accent-color;
+            color: $white;
+            &:after {
+                background-image: url("../../svg/rarr-white.svg");
+            }
+        }
+
+        &:after {
+            content: '';
+            float: right;
+            height: 0.9rem;
+            width: 0.9rem;
+            background-image: url("../../svg/rarr-blue.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @include md {
+            width: 35%;
+        }
+
+        @include lg {
+            width: 30%;
+        }
+    }
+
+    .btn-white {
+        @extend .btn-blue;
+        border: 2px solid $white;
+        color: $white;
+        &:after {
+            background-image: url("../../svg/rarr-white.svg");
+        }
+    }
+}
