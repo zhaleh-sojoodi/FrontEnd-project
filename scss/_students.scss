@@ -1,0 +1,75 @@
+.container-fluid {
+    padding: 3rem $sm-padding-x;
+
+    @include md {
+        padding: 3.5rem $md-padding-x;
+    }
+
+    @include lg {
+        padding: 4rem 10vw;
+    }
+
+    @include xl {
+        padding: 4.5rem 15vw;
+    }
+
+    @include xxl {
+        padding: 5rem 20vw;
+    }
+
+
+    .card {
+        border-radius: 0%;
+        border: 3px solid $lightgrey;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            color: $dark-text-color;
+
+            @include xl {
+                font-size: 1.5rem;
+            }
+
+            @include xxl {
+                font-size: 1.7rem;
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+
+            @include xl {
+                font-size: 0.9rem;
+            }
+        }
+
+        span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: $body-text-color;
+            margin-bottom: 1rem;
+
+            &.staff-email {
+                margin-bottom: 0;
+            }
+
+            @include xl {
+                font-size: 0.9rem;
+            }
+        }
+
+        .student-socials {
+            a {
+                margin-right: 5px;
+                &:last-child {
+                    margin-right: 0;
+            }
+        }
+        }
+    }
+}
