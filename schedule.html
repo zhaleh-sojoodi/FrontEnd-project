@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Schedule | BCIT Software Systems Developer</title>
+    <link href='packages/core/main.css' rel='stylesheet'>
+    <link href='packages/daygrid/main.css' rel='stylesheet'>
+    <link href='packages/timegrid/main.css' rel='stylesheet'>
+    <link href='packages/list/main.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/scripts.js"></script>
+    <script src='packages/core/main.js'></script>
+    <script src='packages/interaction/main.js'></script>
+    <script src='packages/daygrid/main.js'></script>
+    <script src='packages/timegrid/main.js'></script>
+    <script src='packages/list/main.js'></script>
     <script src="./js/calendar.js"></script>
+    <script src="./js/scripts.js"></script>
 </head>
 <body>
     <header id="js-header" class="site-header">
@@ -48,7 +57,7 @@
         </div>
     </div>
     <main>
-        <section>
+        <section class="calendar-container">
         <div id="calendar"></div>
         </section>
     </main>
@@ -64,7 +73,7 @@
                 <path fill="#FFFFFF" d="M86.8,7.1V2h-1.2V1h3.6V2h-1.2v5.1H86.8z M93.8,7.1V2.8h0l-1,4.3h-0.9l-1-4.3h0v4.3h-1.1V1h1.6l0.9,3.8h0 L93.3,1h1.6v6.2H93.8z"></path>
             </g>
         </svg></a>
-        <small>&copy; 2019 Software Systems Developer</small>
+        <a href="./" class="footer-link"><small>&copy; 2019 Software Systems Developer</small></a>
     </footer>
 </body>
 </html>

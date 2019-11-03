@@ -1,3 +1,4 @@
+/** ONLOAD SCRIPTS **/
 onload = function(){
 
     // Site Variables
@@ -21,8 +22,14 @@ onload = function(){
 
     // Change header when scrolling down page
     window.onscroll = checkHeaderState
+
+    // Render Calendar if on Schedule page
+    if(window.location.pathname.split("/").pop() == "schedule.html"){
+        renderCalendar()
+    }
 }
 
+/** FUNCTIONS **/
 // Changes site header color when scrolling
 function checkHeaderState(){
     let y = window.scrollY
@@ -49,4 +56,38 @@ function changeHeaderScrollClasses(method){
         header.classList.remove("site-header-scroll")
         siteNav.classList.remove("site-header-scroll")
     }
-} 
+}
+
+function renderCalendar(){
+    let calendarEl = document.getElementById('calendar');
+	let calendar = new FullCalendar.Calendar(calendarEl, {
+		themeSystem: 'bootstrap',
+		height: 'auto',
+		fixedWeekCount: false,
+		weekends: false,
+		plugins: ['interaction', 'dayGrid', 'timeGrid', 'list'],
+		header: {
+			left: 'title',
+			right: 'prev,next,dayGridMonth,listMonth',
+
+		},
+		validRange: {
+			start: '2019-09-09',
+			end: '2020-05-08'
+		},
+		defaultDate: new Date().toISOString().slice(0, 10),
+		navLinks: false,
+		businessHours: false,
+		editable: false,
+		events: data,
+		showNonCurrentDates: false,
+		eventColor: 'transparent',
+		defaultView: window.innerWidth < 768 ? 'listWeek' : 'dayGridMonth',
+		buttonText: {
+			list: "List",
+			month: "Month"
+		}
+    }, );
+
+	calendar.render();
+}
