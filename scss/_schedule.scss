@@ -1,11 +1,95 @@
-.calendar {
-    max-width: 100%;
-
-    .row {
-        justify-content: center;
-
-        div {
-            border: 1px solid black;
-        }
+.calendar-container {
+    @include lg {
+        padding: 4rem 5vw;
     }
+
+    @include xl {
+        padding: 4rem 15vw;
+    }
+
+    @include xxl {
+        padding: 4rem 17vw;
+    }
+}
+
+// Month Title
+.fc-left h2 {
+    font-weight: 600;
+}
+
+// Weekday Name Headings
+.fc th {
+    padding: 0.5rem 1rem;
+}
+
+
+// Day Number Container
+td .fc-day-top {
+    padding: 0.5rem;
+}
+
+// Day Number
+.fc-day-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $dark-text-color;
+
+    @include lg {
+        font-size: 1.6rem;
+    }
+
+    @include xl {
+        font-size: 1.7rem;
+    }
+}
+
+// Event Content Container
+.fc-content {
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+    font-weight: 600;
+    color: $body-text-color;
+    cursor: default;
+}
+
+// Header Buttons
+.fc-button {
+    font-weight: 600;
+    background-color: transparent;
+    color: $body-text-color;
+    border-radius: 0%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $body-text-color;
+        border: 1px solid $body-text-color;
+    }
+}
+
+// Header Buttons Active State
+.fc-button-primary:not(:disabled):active,
+.fc-button-primary:not(:disabled).fc-button-active {
+    background-color: $body-text-color;
+}
+
+// Month View Grid Cells
+.fc-dayGrid-view .fc-body .fc-row {
+    min-height: 150px;
+
+    @include xl {
+        min-height: 175px;
+    }
+}
+
+// List View Event Titles
+.fc-list-item-title {
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+.fc-list-table td {
+    padding: 1.1rem;
+}
+
+.fc-next-button {
+    margin-right: 1rem;
 }
