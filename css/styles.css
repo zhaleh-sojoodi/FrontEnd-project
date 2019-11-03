@@ -1246,6 +1246,7 @@ td .fc-day-top {
 }
 
 .contact-form label {
+  padding-left: 5px;
   cursor: pointer;
   font-weight: 600;
 }
