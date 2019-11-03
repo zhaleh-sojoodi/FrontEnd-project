@@ -23,6 +23,25 @@
         border: 3px solid $lightgrey;
         transition: background-color 0.3s ease-in-out;
 
+        &.resources-card {
+            height: 100%;
+
+            .card-img-top {
+                padding: 1rem;
+                height: 150px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            @include lg {
+                min-height: 175px;
+            }
+        }
+
         &:hover {
             background-color: #f9f9f9;
         }
@@ -30,6 +49,11 @@
         h1 {
             font-size: 1.2rem;
             color: $dark-text-color;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $main-accent-color;
+            }
 
             @include xl {
                 font-size: 1.5rem;
