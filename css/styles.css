@@ -57,7 +57,7 @@ ul {
 
 body {
   overflow-x: hidden;
-  font-family: "Metropolis Regular";
+  font-family: "Metropolis Regular", sans-serif;
   color: #002d55;
   font-size: 1rem;
 }
@@ -592,13 +592,17 @@ body ::selection {
 main h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: "Metropolis Regular", sans-serif;
   font-weight: 600;
 }
 
 main h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-family: 'Metropolis Medium', sans-serif;
+  font-weight: 600;
 }
 
 section {
@@ -634,31 +638,41 @@ section.section-reduced-padding {
 }
 
 section h1 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #001D36;
 }
 
 @media (min-width: 768px) {
   section h1 {
-    font-size: 1.7rem;
+    font-size: 2.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   section h1 {
-    font-size: 1.9rem;
+    font-size: 2.25rem;
   }
 }
 
 @media (min-width: 1280px) {
   section h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  section h1 {
+    font-size: 2.75rem;
   }
 }
 
 section p {
-  font-weight: 400;
+  font-family: 'Metropolis Regular', sans-serif;
+  font-weight: 600;
   line-height: 1.75rem;
   margin-bottom: 2rem;
+  font-size: 1rem;
 }
 
 section p:last-child {
@@ -711,11 +725,10 @@ section.section-home-parallax {
   }
 }
 
-section .bolded-text {
-  font-weight: 700;
-}
-
 section .learn-list {
+  font-size: 1rem;
+  font-family: 'Metropolis Regular', sans-serif;
+  font-weight: 600;
   list-style-image: url("../../svg/white-check.svg");
   padding-left: 1.5rem;
 }
@@ -759,9 +772,16 @@ section .requirements-desc {
 }
 
 section .requirements-list {
+  font-size: 1rem;
+  font-family: 'Metropolis Regular', sans-serif;
+  font-weight: 600;
   list-style-type: circle;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
+}
+
+section .requirements-list li {
+  margin: 0.75rem 0;
 }
 
 section .requirements-list:last-child {
@@ -939,18 +959,220 @@ footer .footer-nav li {
   font-size: 0.9rem;
 }
 
-.calendar {
-  max-width: 100%;
+.container-fluid {
+  padding: 3rem 1rem;
 }
 
-.calendar .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (min-width: 768px) {
+  .container-fluid {
+    padding: 3.5rem 1.75rem;
+  }
 }
 
-.calendar .row div {
-  border: 1px solid black;
+@media (min-width: 1024px) {
+  .container-fluid {
+    padding: 4rem 10vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-fluid {
+    padding: 4.5rem 15vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container-fluid {
+    padding: 5rem 20vw;
+  }
+}
+
+.container-fluid .card {
+  border-radius: 0%;
+  border: 3px solid #f4f4f4;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.container-fluid .card.resources-card {
+  height: 100%;
+}
+
+.container-fluid .card.resources-card .card-img-top {
+  padding: 1rem;
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container-fluid .card.resources-card:hover {
+  background-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .container-fluid .card.resources-card {
+    min-height: 175px;
+  }
+}
+
+.container-fluid .card:hover {
+  background-color: #f9f9f9;
+}
+
+.container-fluid .card h1 {
+  font-size: 1.2rem;
+  color: #001D36;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-fluid .card h1:hover {
+  color: #296cf6;
+}
+
+@media (min-width: 1280px) {
+  .container-fluid .card h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container-fluid .card h1 {
+    font-size: 1.7rem;
+  }
+}
+
+.container-fluid .card p {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 1280px) {
+  .container-fluid .card p {
+    font-size: 0.9rem;
+  }
+}
+
+.container-fluid .card span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #002d55;
+  margin-bottom: 1rem;
+}
+
+.container-fluid .card span.staff-email {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1280px) {
+  .container-fluid .card span {
+    font-size: 0.9rem;
+  }
+}
+
+.container-fluid .card .student-socials a {
+  margin-right: 5px;
+}
+
+.container-fluid .card .student-socials a:last-child {
+  margin-right: 0;
+}
+
+@media (min-width: 1024px) {
+  .calendar-container {
+    padding: 4rem 5vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .calendar-container {
+    padding: 4rem 15vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .calendar-container {
+    padding: 4rem 17vw;
+  }
+}
+
+.fc-left h2 {
+  font-weight: 600;
+}
+
+.fc th {
+  padding: 0.5rem 1rem;
+}
+
+td .fc-day-top {
+  padding: 0.5rem;
+}
+
+.fc-day-number {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #001D36;
+}
+
+@media (min-width: 1024px) {
+  .fc-day-number {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .fc-day-number {
+    font-size: 1.7rem;
+  }
+}
+
+.fc-content {
+  padding: 1rem 0.5rem 1.5rem 0.5rem;
+  font-weight: 600;
+  color: #002d55;
+  cursor: default;
+}
+
+.fc-button {
+  font-weight: 600;
+  background-color: transparent;
+  color: #002d55;
+  border-radius: 0%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fc-button:hover {
+  background-color: #002d55;
+  border: 1px solid #002d55;
+}
+
+.fc-button-primary:not(:disabled):active,
+.fc-button-primary:not(:disabled).fc-button-active {
+  background-color: #002d55;
+}
+
+.fc-dayGrid-view .fc-body .fc-row {
+  min-height: 150px;
+}
+
+@media (min-width: 1280px) {
+  .fc-dayGrid-view .fc-body .fc-row {
+    min-height: 175px;
+  }
+}
+
+.fc-list-item-title {
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.fc-list-table td {
+  padding: 1.1rem;
+}
+
+.fc-next-button {
+  margin-right: 1rem;
 }
 
 .contact-form {
