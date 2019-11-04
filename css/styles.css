@@ -65,6 +65,8 @@ body {
   font-family: "Metropolis Regular", sans-serif;
   color: #002d55;
   font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body ::-moz-selection {
