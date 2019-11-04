@@ -987,6 +987,18 @@ footer .footer-nav li {
   }
 }
 
+.container-fluid .container-category {
+  background: #001D36;
+  color: #ffffff;
+  font-size: 1.75rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.container-fluid .container-category:first-child {
+  margin-top: 0;
+}
+
 .container-fluid .card {
   border-radius: 0%;
   border: 3px solid #f4f4f4;
@@ -1220,6 +1232,10 @@ td .fc-day-top {
   border-bottom: 2px solid #f4f4f4;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.acc-container .acc-section h1 {
+  color: #002d55;
 }
 
 .acc-container .acc-section:last-child {
