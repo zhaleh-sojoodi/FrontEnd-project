@@ -36,6 +36,10 @@
         border-bottom: 2px solid $light-bg-color;
         transition: all 0.3s ease-in-out;
 
+        h1 {
+            color: $body-text-color;
+        }
+
         &:last-child {
             border-bottom: none;
         }
