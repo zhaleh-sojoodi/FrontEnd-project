@@ -79,7 +79,7 @@
     }
 
     .site-title {
-        font-weight: 600;
+        font-weight: bold;
         font-size: 0.75rem;
         padding-left: 0.5rem;
         color: $light-text-color;
@@ -181,9 +181,8 @@
             padding-right: $lg-padding-x;
             
             li {
-                font-family: 'Metropolis Medium', sans-serif;
                 font-size: 0.95rem;
-                font-weight: 500;
+                font-weight: bold;
                 color: $white;
                 transition: all 0.3s ease;
 
@@ -203,7 +202,7 @@
     @include xl {
         ul li {
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: bold;
         }
     }
 
@@ -234,7 +233,6 @@
             padding-inline-start: 0;
 
             li {
-                font-family: 'Metropolis Medium', sans-serif;
                 text-align: center;
                 font-size: 2rem;
                 margin: 2rem 0;

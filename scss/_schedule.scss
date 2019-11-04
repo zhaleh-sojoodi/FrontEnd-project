@@ -31,7 +31,7 @@ td .fc-day-top {
 // Day Number
 .fc-day-number {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: bold;
     color: $dark-text-color;
 
     @include lg {
@@ -46,14 +46,14 @@ td .fc-day-top {
 // Event Content Container
 .fc-content {
     padding: 1rem 0.5rem 1.5rem 0.5rem;
-    font-weight: 600;
+    font-weight: bold;
     color: $body-text-color;
     cursor: default;
 }
 
 // Header Buttons
 .fc-button {
-    font-weight: 600;
+    font-weight: bold;
     background-color: transparent;
     color: $body-text-color;
     border-radius: 0%;
@@ -82,7 +82,7 @@ td .fc-day-top {
 
 // List View Event Titles
 .fc-list-item-title {
-    font-weight: 600;
+    font-weight: bold;
     padding: 1rem 0;
 }
 

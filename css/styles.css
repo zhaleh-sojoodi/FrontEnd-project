@@ -26,47 +26,27 @@ ul {
 }
 
 @font-face {
-  font-family: 'Metropolis Regular';
-  src: url("../fonts/Metropolis-Regular.otf") format("opentype");
-  src: url("../fonts/metropolis-regular-webfont.woff2") format("woff2"), url("../fonts/metropolis-regular-webfont.woff") format("woff");
-  font-weight: 400;
+  font-family: 'Metropolis';
+  src: url("../fonts/Metropolis-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Metropolis Medium';
-  src: url("../fonts/Metropolis-Medium.otf") format("opentype");
-  src: url("../fonts/metropolis-medium-webfont.woff2") format("woff2"), url("../fonts/metropolis-medium-webfont.woff") format("woff");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Metropolis SemiBold';
-  src: url("../fonts/Metropolis-SemiBold.otf") format("opentype");
-  src: url("../fonts/metropolis-semibold-webfont.woff2") format("woff2"), url("../fonts/metropolis-semibold-webfont.woff") format("woff");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Metropolis Bold';
-  src: url("../fonts/Metropolis-Bold.otf") format("opentype");
-  src: url("../fonts/metropolis-bold-webfont.woff2") format("woff2"), url("../fonts/metropolis-bold-webfont.woff") format("woff");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Metropolis ExtraBold';
-  src: url("../fonts/Metropolis-ExtraBold.otf") format("opentype");
-  src: url("../fonts/metropolis-extrabold-webfont.woff2") format("woff2"), url("../fonts/metropolis-extrabold-webfont.woff") format("woff");
-  font-weight: 800;
+  font-family: 'Metropolis';
+  src: url("../fonts/Metropolis-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 body {
   overflow-x: hidden;
-  font-family: "Metropolis Regular", sans-serif;
+  font-family: "Metropolis", sans-serif;
   color: #002d55;
   font-size: 1rem;
-  text-rendering: optimizeLegibility;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body ::-moz-selection {
@@ -184,7 +164,7 @@ body ::selection {
 }
 
 .site-logo-container .site-title {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 0.75rem;
   padding-left: 0.5rem;
   color: #ffffff;
@@ -314,9 +294,8 @@ body ::selection {
     padding-right: 3rem;
   }
   .site-nav ul li {
-    font-family: 'Metropolis Medium', sans-serif;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: bold;
     color: #ffffff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -332,7 +311,7 @@ body ::selection {
 @media (min-width: 1280px) {
   .site-nav ul li {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: bold;
   }
 }
 
@@ -374,7 +353,6 @@ body ::selection {
 }
 
 .site-nav.open-nav ul li {
-  font-family: 'Metropolis Medium', sans-serif;
   text-align: center;
   font-size: 2rem;
   margin: 2rem 0;
@@ -535,7 +513,7 @@ body ::selection {
 }
 
 .hero h1 {
-  font-family: 'Metropolis Medium';
+  font-weight: bold;
   color: #ffffff;
   font-size: 2.25rem;
   letter-spacing: 1px;
@@ -570,6 +548,7 @@ body ::selection {
   color: #ffffff;
   font-size: 1rem;
   line-height: 1.25rem;
+  font-weight: normal;
 }
 
 @media (min-width: 768px) {
@@ -594,22 +573,6 @@ body ::selection {
   .hero p {
     font-size: 1.85rem;
   }
-}
-
-main h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-family: "Metropolis Regular", sans-serif;
-  font-weight: 600;
-}
-
-main h2 {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-family: 'Metropolis Medium', sans-serif;
-  font-weight: 600;
 }
 
 section {
@@ -646,8 +609,9 @@ section.section-reduced-padding {
 
 section h1 {
   font-size: 2.1rem;
-  font-weight: 700;
+  font-weight: bold;
   color: #001D36;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -674,9 +638,16 @@ section h1 {
   }
 }
 
+section h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
 section p {
-  font-family: 'Metropolis Regular', sans-serif;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 1.75rem;
   margin-bottom: 2rem;
   font-size: 1rem;
@@ -687,7 +658,7 @@ section p:last-child {
 }
 
 section .paragraph-link {
-  font-weight: 600;
+  font-weight: bold;
   color: #296cf6;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -695,6 +666,10 @@ section .paragraph-link {
 
 section .paragraph-link:hover {
   color: #002d55;
+}
+
+section .bolded-text {
+  font-weight: bold;
 }
 
 section.section-light {
@@ -734,8 +709,6 @@ section.section-home-parallax {
 
 section .learn-list {
   font-size: 1rem;
-  font-family: 'Metropolis Regular', sans-serif;
-  font-weight: 600;
   list-style-image: url("../../svg/white-check.svg");
   padding-left: 1.5rem;
 }
@@ -780,8 +753,6 @@ section .requirements-desc {
 
 section .requirements-list {
   font-size: 1rem;
-  font-family: 'Metropolis Regular', sans-serif;
-  font-weight: 600;
   list-style-type: circle;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
@@ -801,7 +772,7 @@ section .btn-blue, section .btn-white, section .contact-form input[type=submit],
   margin-top: 1rem;
   padding: 1rem;
   width: 100%;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 0.8rem;
   color: #002d55;
   text-transform: uppercase;
@@ -948,7 +919,7 @@ footer .footer-link {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin: 1rem 0;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 footer .footer-link:hover {
@@ -962,7 +933,7 @@ footer .footer-nav {
 
 footer .footer-nav li {
   margin: 0.5rem 0;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 0.9rem;
 }
 
@@ -1074,7 +1045,7 @@ footer .footer-nav li {
 
 .container-fluid .card span {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #002d55;
   margin-bottom: 1rem;
 }
@@ -1129,7 +1100,7 @@ td .fc-day-top {
 
 .fc-day-number {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #001D36;
 }
 
@@ -1147,13 +1118,13 @@ td .fc-day-top {
 
 .fc-content {
   padding: 1rem 0.5rem 1.5rem 0.5rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #002d55;
   cursor: default;
 }
 
 .fc-button {
-  font-weight: 600;
+  font-weight: bold;
   background-color: transparent;
   color: #002d55;
   border-radius: 0%;
@@ -1182,7 +1153,7 @@ td .fc-day-top {
 }
 
 .fc-list-item-title {
-  font-weight: 600;
+  font-weight: bold;
   padding: 1rem 0;
 }
 
@@ -1282,8 +1253,8 @@ td .fc-day-top {
   margin: 0.5rem 0;
   padding: 0.75rem;
   resize: vertical;
-  font-family: 'Metropolis Regular', sans-serif;
-  font-weight: 600;
+  font-family: "Metropolis", sans-serif;
+  font-weight: bold;
 }
 
 .contact-form input[type=text], .contact-form textarea {
@@ -1326,7 +1297,7 @@ td .fc-day-top {
 .contact-form label {
   padding-left: 5px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .contact-form input[type=submit] {
