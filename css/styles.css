@@ -638,7 +638,7 @@ section.section-reduced-padding {
 }
 
 section h1 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: #001D36;
 }
@@ -1173,6 +1173,61 @@ td .fc-day-top {
 
 .fc-next-button {
   margin-right: 1rem;
+}
+
+.acc-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.acc-container .acc-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #001D36;
+}
+
+.acc-container .acc-btn:first-of-type {
+  margin-top: 0;
+}
+
+.acc-container .acc-btn h1 {
+  margin-bottom: 0;
+  font-size: 1.75rem;
+  color: #ffffff;
+}
+
+.acc-container .acc-btn .acc-btn-icon {
+  fill: #ffffff;
+}
+
+.acc-container .acc-content {
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #f4f4f4;
+}
+
+.acc-container .acc-section {
+  padding: 1.5rem 1rem;
+  border-bottom: 2px solid #f4f4f4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.acc-container .acc-section:last-child {
+  border-bottom: none;
+}
+
+.acc-container .acc-section:hover {
+  background-color: #f9f9f9;
 }
 
 .contact-form {
