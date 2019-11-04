@@ -23,7 +23,7 @@ onload = function(){
     // Change header when scrolling down page
     window.onscroll = checkHeaderState
 
-    // Render Calendar if on Schedule page
+    // SCHEDULE Page: Render Calendar
     if(window.location.pathname.split("/").pop() == "schedule.html"){
         renderCalendar()
     }
