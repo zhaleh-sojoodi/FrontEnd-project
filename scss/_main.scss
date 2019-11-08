@@ -96,14 +96,22 @@ section {
 
     &.section-home-parallax {
         @extend .section-dark;
-        background: url(../../images/office-medium.jpg);
+        background: url('../../images/office-small.jpg');
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
 
+        @include md {
+            background: url('../../images/office-medium.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         @include lg {
-            background: url(../../images/office-large.jpg);
+            background: url('../../images/office-large.jpg');
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;

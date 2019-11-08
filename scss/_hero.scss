@@ -24,9 +24,14 @@
     }
 
     &.hero-home {
-        background: url("../images/code-medium.jpg");
+        background: url("../images/code-small.jpg");
         background-size: cover;
         background-position: bottom 75% right 80%;
+
+        @include md {
+            background: url("../images/code-medium.jpg");
+            background-position: bottom 75% right 25%;
+        }
 
         @include lg {
             background: url("../images/code-large.jpg");
@@ -35,9 +40,14 @@
     }
 
     &.hero-students {
-        background: url("../images/workspace-medium.jpg");
+        background: url("../images/workspace-small.jpg");
         background-size: cover;
         background-position: bottom 25% right 40%;
+
+        @include md {
+            background: url("../images/workspace-medium.jpg");
+            background-position: bottom 25% right 25%;
+        }
 
         @include lg {
             background: url("../images/workspace-large.jpg");
@@ -46,9 +56,14 @@
     }
 
     &.hero-schedule {
-        background: url("../images/crowd-medium.jpg");
+        background: url("../images/crowd-small.jpg");
         background-size: cover;
         background-position: bottom 75% right 70%;
+
+        @include md {
+            background: url("../images/crowd-medium.jpg");
+            background-position: bottom 50% right 25%;
+        }
 
         @include lg {
             background: url("../images/crowd-large.jpg");
@@ -57,9 +72,14 @@
     }
 
     &.hero-staff {
-        background: url("../images/building-medium.jpg");
+        background: url("../images/building-small.jpg");
         background-size: cover;
         background-position: bottom 75% right 80%;
+
+        @include lg {
+            background: url("../images/building-medium.jpg");
+            background-position: bottom 75% right 25%;
+        }
 
         @include lg {
             background: url("../images/building-large.jpg");
@@ -84,20 +104,30 @@
     }
 
     &.hero-resources {
-        background: url("../images/laptop-medium.jpg");
+        background: url("../images/screen-small.jpg");
         background-size: cover;
-        background-position: bottom 40% right 70%;
+        background-position: bottom 90% right 70%;
+
+        @include md {
+            background: url("../images/screen-medium.jpg");
+            background-position: bottom 90% right 70%;
+        }
 
         @include lg {
-            background: url("../images/laptop-large.jpg");
-            background-position: bottom 40% right 25%;
+            background: url("../images/screen-large.jpg");
+            background-position: bottom 90% right 25%;
         }
     }
 
     &.hero-contact {
-        background: url("../images/street-medium.jpg");
+        background: url("../images/street-small.jpg");
         background-size: cover;
         background-position: bottom 50% right 100%;
+
+        @include lg {
+            background: url("../images/street-medium.jpg");
+            background-position: bottom 40% right 25%;
+        }
 
         @include lg {
             background: url("../images/street-large.jpg");

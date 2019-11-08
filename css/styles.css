@@ -415,9 +415,16 @@ body ::selection {
 }
 
 .hero.hero-home {
-  background: url("../images/code-medium.jpg");
+  background: url("../images/code-small.jpg");
   background-size: cover;
   background-position: bottom 75% right 80%;
+}
+
+@media (min-width: 768px) {
+  .hero.hero-home {
+    background: url("../images/code-medium.jpg");
+    background-position: bottom 75% right 25%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -428,9 +435,16 @@ body ::selection {
 }
 
 .hero.hero-students {
-  background: url("../images/workspace-medium.jpg");
+  background: url("../images/workspace-small.jpg");
   background-size: cover;
   background-position: bottom 25% right 40%;
+}
+
+@media (min-width: 768px) {
+  .hero.hero-students {
+    background: url("../images/workspace-medium.jpg");
+    background-position: bottom 25% right 25%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -441,9 +455,16 @@ body ::selection {
 }
 
 .hero.hero-schedule {
-  background: url("../images/crowd-medium.jpg");
+  background: url("../images/crowd-small.jpg");
   background-size: cover;
   background-position: bottom 75% right 70%;
+}
+
+@media (min-width: 768px) {
+  .hero.hero-schedule {
+    background: url("../images/crowd-medium.jpg");
+    background-position: bottom 50% right 25%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -454,9 +475,16 @@ body ::selection {
 }
 
 .hero.hero-staff {
-  background: url("../images/building-medium.jpg");
+  background: url("../images/building-small.jpg");
   background-size: cover;
   background-position: bottom 75% right 80%;
+}
+
+@media (min-width: 1024px) {
+  .hero.hero-staff {
+    background: url("../images/building-medium.jpg");
+    background-position: bottom 75% right 25%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -487,22 +515,36 @@ body ::selection {
 }
 
 .hero.hero-resources {
-  background: url("../images/laptop-medium.jpg");
+  background: url("../images/screen-small.jpg");
   background-size: cover;
-  background-position: bottom 40% right 70%;
+  background-position: bottom 90% right 70%;
+}
+
+@media (min-width: 768px) {
+  .hero.hero-resources {
+    background: url("../images/screen-medium.jpg");
+    background-position: bottom 90% right 70%;
+  }
 }
 
 @media (min-width: 1024px) {
   .hero.hero-resources {
-    background: url("../images/laptop-large.jpg");
-    background-position: bottom 40% right 25%;
+    background: url("../images/screen-large.jpg");
+    background-position: bottom 90% right 25%;
   }
 }
 
 .hero.hero-contact {
-  background: url("../images/street-medium.jpg");
+  background: url("../images/street-small.jpg");
   background-size: cover;
   background-position: bottom 50% right 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero.hero-contact {
+    background: url("../images/street-medium.jpg");
+    background-position: bottom 40% right 25%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -690,16 +732,26 @@ section.section-centered {
 }
 
 section.section-home-parallax {
-  background: url(../../images/office-medium.jpg);
+  background: url("../../images/office-small.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+@media (min-width: 768px) {
+  section.section-home-parallax {
+    background: url("../../images/office-medium.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 @media (min-width: 1024px) {
   section.section-home-parallax {
-    background: url(../../images/office-large.jpg);
+    background: url("../../images/office-large.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -1014,12 +1066,6 @@ footer .footer-nav li {
 .container-fluid .card h1 {
   font-size: 1.2rem;
   color: #001D36;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.container-fluid .card h1:hover {
-  color: #296cf6;
 }
 
 @media (min-width: 1280px) {
