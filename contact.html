@@ -54,26 +54,29 @@
         </section>
         <section class="section-reduced-padding">
             <h1>Contact Us</h1>
-            <form class="contact-form" action="javascript:void(0);">
-                <div class="contact-row">
-                <input type="text" name="name" id="fname" placeholder="First Name *"/>
+            <form id="contact-form" class="contact-form" action="javascript:void(0);">
+                <ul class="form-errors-container">
+                </ul>
 
-                <input type="text" name="name" id="lname" placeholder="Last Name *"/>
+                <div class="contact-row">
+                <input type="text" name="fname" id="fname" placeholder="First Name *"/>
+
+                <input type="text" name="lname" id="lname" placeholder="Last Name *"/>
                 </div>
 
                 <div class="contact-row">
-                <input type="text" name="name" id="email" placeholder="Email Address *"/>
+                <input type="text" name="email" id="email" placeholder="Email Address *"/>
 
-                <input type="text" name="name" id="phone" placeholder="Phone Number"/>
+                <input type="text" name="phone" id="phone" placeholder="Phone Number"/>
                 </div>
 
-                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <textarea name="message" id="message" placeholder="Message *"></textarea>
+
+                <input type="radio" name="position" id="prospective" checked />
+                <label for="prospective">I am a prospective student</label><br />
 
                 <input type="radio" name="position" id="current" value="Current Student" />
                 <label for="current">I am a current student</label><br />
-
-                <input type="radio" name="position" id="prospective" />
-                <label for="prospective">I am a prospective student</label><br />
 
                 <input type="radio" name="position" id="instructor" />
                 <label for="instructor">I am an instructor</label><br />
@@ -95,5 +98,8 @@
         </svg></a>
         <a href="./" class="footer-link"><small>&copy; 2019 Software Systems Developer</small></a>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
 </body>
 </html>

@@ -27,6 +27,48 @@ onload = function(){
     if(window.location.pathname.split("/").pop() == "schedule.html"){
         renderCalendar()
     }
+
+    // CONTACT Page: Form Validation
+    if(window.location.pathname.split("/").pop() == "contact.html"){
+        $('#contact-form').validate({
+            errorContainer: '.form-errors-container',
+            errorLabelContainer: '.form-errors-container',
+            wrapper: 'li',
+            rules: {
+                fname: {
+                    required: true
+                },
+                lname: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                message: {
+                    required: true
+                }
+            },
+            messages: {
+                fname: {
+                    required: "First Name is required."
+                },
+                lname: {
+                    required: "Last Name is required."
+                },
+                email: {
+                    required: "Please enter a valid email."
+                },
+                message: {
+                    required: "Message is required."
+                }
+            },
+            submitHandler: function (form) {
+                alert('Thank you, ' + $('#fname').val() +'. We have received your information and will contact you shortly.');
+                return false;
+            }
+        });
+    }
 }
 
 /** FUNCTIONS **/

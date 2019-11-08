@@ -27,18 +27,18 @@
     input[type=text], input[type=submit], textarea {
         width: 100%;
         margin: 0.5rem 0;
-        padding: 0.75rem;
+        padding: 1rem;
         resize: vertical;
         font-family: $body-font;
         font-weight: bold;
     }
 
     input[type=text], textarea {
+        font-size: 1rem;
         outline: none;
         border: none;
         background: $light-bg-color;
         color: $body-text-color;
-        transition: all 0.3s ease-in-out;
         border-bottom: 4px solid transparent;
 
         &:focus {
@@ -47,6 +47,8 @@
     }
 
     input[type=text]{
+        transition: all 0.3s ease-in-out;
+        
         @include md {
             &:first-child {
                 margin-right: 1rem;
@@ -76,6 +78,15 @@
     input[type=submit] {
         @extend .btn-blue;
         background: transparent;
+    }
+
+    .form-errors-container {
+        margin: 0;
+        padding-inline-start: 0;
+        li {
+            margin: 0.5rem 0;
+            color: red;
+        }
     }
 
     .contact-row {

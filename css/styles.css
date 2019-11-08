@@ -1253,24 +1253,28 @@ td .fc-day-top {
 .contact-form input[type=text], .contact-form input[type=submit], .contact-form textarea {
   width: 100%;
   margin: 0.5rem 0;
-  padding: 0.75rem;
+  padding: 1rem;
   resize: vertical;
   font-family: "Metropolis", sans-serif;
   font-weight: bold;
 }
 
 .contact-form input[type=text], .contact-form textarea {
+  font-size: 1rem;
   outline: none;
   border: none;
   background: #f4f4f4;
   color: #002d55;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   border-bottom: 4px solid transparent;
 }
 
 .contact-form input[type=text]:focus, .contact-form textarea:focus {
   border-bottom: 4px solid #dbdbdb;
+}
+
+.contact-form input[type=text] {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -1304,6 +1308,17 @@ td .fc-day-top {
 
 .contact-form input[type=submit] {
   background: transparent;
+}
+
+.contact-form .form-errors-container {
+  margin: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+.contact-form .form-errors-container li {
+  margin: 0.5rem 0;
+  color: red;
 }
 
 @media (min-width: 768px) {
