@@ -26,17 +26,9 @@ onload = function(){
     // SCHEDULE Page: Render Calendar
     if(window.location.pathname.split("/").pop() == "schedule.html"){
         renderCalendar(); 
-        (window).onresize = function() {
-            if (window.innerWidth < 768) {
-                calendarMobile.render();           
-            }
-            else{
-                calendarMobile.render();
-                
-            }
-            
-        }
+
     }
+   
 
     // CONTACT Page: Form Validation
     if(window.location.pathname.split("/").pop() == "contact.html"){
@@ -143,7 +135,6 @@ function renderCalendar(){
     }, 
     );
     
- 
 	calendarMobile = new FullCalendar.Calendar(calendarEl, {
 		themeSystem: 'bootstrap',
 		height: 'auto',
@@ -169,6 +160,8 @@ function renderCalendar(){
 		defaultView:  'listWeek',
     }, 
     );
-     return calendar.render();
     
+     return calendar.render();
 }
+
+
